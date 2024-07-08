@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topo {
+    border: 1px solid black;
+    height: 145px;
+    background: radial-gradient(green, transparent);
+}
+
+.topo img {
+    width: 9%;
+    height: 100%;
+}
+
+body {
+    font-family: arial, Helvetica, sans-serif;
+    background: radial-gradient(green, transparent);
+}
+
+div#menu {
+    display: block;
+    width: 100%;
+    height: 35px;
+    background: radial-gradient(green, transparent);
+    border-bottom: 1px solid #c0c0c0;
+}
+
+div#menu ul.options {
+    list-style: none;
+    border: 1px solid #c0c0c0;
+    float: left;
+    display: block;
+}
+
+div#menu ul.options li {
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+    width: 250px;
+    height: 98%;
+}
+
+div#menu ul.options li a {
+    text-decoration: none;
+    font-family: arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 8px;
+    color: #18181b;
+    background: radial-gradient(green, transparent);
+}
+
+div#menu ul.options li a:hover {
+    color: #a0aec0;
+    background-color: #18181b;
+}
+
+h1.title {
+    font-family: "Baloo Bhaina 2";
+    color: #18181b;
+    padding: 15px;
+    text-align: center;
+}
+
+p.subtitle {
+    display: block;
+    text-align: center;
+    font-family: "Baloo Bhaina 2";
+}
+
+fieldset {
+    display: block;
+    width: 1140px;
+    height: 69px;
+    margin-left: 400px;
+    border: none;
+}
+
+fieldset label {
+    display: block;
+    float: left;
+    padding: 2px;
+}
+
+fieldset span {
+    display: block;
+    float: left;
+    font-family: "Times New Roman";
+    width: 194px;
+}
+
+button.salvar {
+    background-color: blue;
+    color: #e2e8f0;
+    border-radius: 9px;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+}
+
+button.limpar {
+    background-color: orange;
+    color: #e2e8f0;
+    border-radius: 9px;
+    width: 70px;
+    height: 30px;
+    font-weight: bold;
+}
+
