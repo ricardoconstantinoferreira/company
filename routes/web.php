@@ -1,24 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StateController;
+use App\Models\City;
 
 Route::get('/home', function () {
     return view('home', ['name' => 'Ricardo']);
 });
 
 Route::get('/cliente', function() {
-
-    $object = new StateController();
-    $states = $object->getList();
+    $city = new City();
 
     return view('cliente', [
-        'states' => $states
+        'states' => $city->getStates()
     ]);
 });
 
 Route::get('/representante', function() {
-    return view('representante', []);
+    $city = new City();
+
+    return view('representante', [
+        'states' => $city->getStates()
+    ]);
 });
 
 Route::get('/state', [StateController::class, 'getList']);

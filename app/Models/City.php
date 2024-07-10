@@ -1,23 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Models;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class StateController extends Controller
+class City extends Model
 {
 
-    /**
-     * Get all states
-     *
-     * @return array
-     */
-    public function getList(): array
+    protected $table = 'city';
+
+    public function getStates()
     {
         $result = [];
-        $states = DB::table('city')
+        $states = self::groupBy('state')
             ->selectRaw('state')
-            ->groupBy('state')
             ->get()
             ->all();
 
@@ -26,6 +23,7 @@ class StateController extends Controller
                 $result[$k] = $state->state;
             }
         }
+
         return $result;
     }
 }
