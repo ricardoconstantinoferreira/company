@@ -10,6 +10,11 @@ class City extends Model
 
     protected $table = 'city';
 
+    /**
+     * Get all states
+     *
+     * @return array
+     */
     public function getStates(): array
     {
         $result = [];
@@ -27,6 +32,12 @@ class City extends Model
         return $result;
     }
 
+    /**
+     * Get city by state
+     *
+     * @param string $state
+     * @return string
+     */
     public function getCityByState(string $state): string
     {
         $result = [];

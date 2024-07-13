@@ -6,10 +6,17 @@
             </a>
         </li>
         <li>
-            <a href="/cliente">
+            <a href="{{ route('customers.index') }}">
                 Cadastro de Clientes
             </a>
         </li>
+
+        <li>
+            <a href="/customers/search/">
+                Busca de Clientes
+            </a>
+        </li>
+
         <li>
             <a href="/representante">
                 Cadastro de Representantes

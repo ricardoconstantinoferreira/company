@@ -14,7 +14,8 @@
         <h1 class="title">Sistema Company</h1>
 
         <div id="formulario">
-            <form name="form_cliente">
+            <form name="form_cliente" action="{{ route('customers.store') }}" method="POST">
+                @csrf
                 <fieldset class="cliente">
                     <label>CPF:</label>
                     <span><input type="text" name="document" /></span>
@@ -43,14 +44,11 @@
                         <select name="cidade"></select>
                     </span>
                     <label class="buttons">
-                        <button type="button" class="salvar">Salvar</button>
+                        <button type="submit" class="salvar">Salvar</button>
                         <button type="button" class="limpar">Limpar</button>
                     </label>
                 </fieldset>
             </form>
-        </div>
-        <div id="listagem">
-
         </div>
     </div>
 </body>
